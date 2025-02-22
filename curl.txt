@@ -1,0 +1,10 @@
+
+curl -H "Accept: application/json" http://localhost:3000/users
+curl  -v -X POST -H "Content-Type: application/json" -d @user.json http://localhost:3000/users
+curl -X PUT -H "Content-Type: application/json" -d @user.json http://localhost:3000/users/3
+curl -X DELETE http://localhost:3000/users/4
+curl  -v -X POST -H "Content-Type: application/json" -H "Accept: application/xml" -d @user.json http://localhost:3000/users
+
+curl -H "Accept: application/xml" http://localhost:3000/users/2/posts
+
+curl  -v -X POST -H "Content-Type: application/json" -d @post.json http://localhost:3000/users/1/posts
